@@ -32,8 +32,8 @@
 TOP_DIR := ../../..
 include ../buildenv.mk
 
-CXXFLAGS  += -Werror
-CFLAGS    += -Werror 
+CXXFLAGS  += -Wno-error
+CFLAGS    += -Wno-error 
 EXTERNAL_LIB += -L$(LINUX_EXTERNAL_DIR)/epid/ -lepid
 INCLUDE += -I$(LINUX_PSW_DIR)/ae/data/constants/linux \
            -I$(SGX_IPP_INC)/                          \

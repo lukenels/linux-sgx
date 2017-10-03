@@ -32,8 +32,8 @@
 TOP_DIR := ../../../..
 include ../../buildenv.mk
 
-CXXFLAGS  += -Werror
-CFLAGS    += -Werror 
+CXXFLAGS  += -Wno-error
+CFLAGS    += -Wno-error 
 
 INCLUDE += -I.                                   \
            -I$(SGX_IPP_INC)/                     \

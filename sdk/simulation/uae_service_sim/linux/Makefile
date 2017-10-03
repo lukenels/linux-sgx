@@ -45,8 +45,8 @@ INCLUDES := -I..                                            \
             -I$(LINUX_PSW_DIR)/ae/inc/internal \
             -I$(LINUX_PSW_DIR)/ae/common  
 
-CXXFLAGS += -Wall -fPIC $(INCLUDES) -Werror -g
-CFLAGS := $(filter-out -fPIC -Werror, $(CFLAGS)) -Wall $(INCLUDES)
+CXXFLAGS += -Wall -fPIC $(INCLUDES) -Wno-error -g
+CFLAGS := $(filter-out -fPIC -Wno-error, $(CFLAGS)) -Wall $(INCLUDES)
 
 VERSION_SCRIPT = $(shell pwd)/uae_service_sim.linux.version
 LD_OPT_WITHVER = -Wl,--version-script=$(VERSION_SCRIPT)
@@ -103,7 +103,7 @@ ifndef DEBUG
 endif
 
 %.o: %.c
-	$(CC) $(CFLAGS) -Werror -fPIC -c $< -o $@
+	$(CC) $(CFLAGS) -Wno-error -fPIC -c $< -o $@
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@

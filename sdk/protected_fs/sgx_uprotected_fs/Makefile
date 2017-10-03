@@ -35,7 +35,7 @@ include $(TOP_DIR)/buildenv.mk
 INCLUDE += -I$(COMMON_DIR)/inc/internal \
            -I$(COMMON_DIR)/inc
 
-CXXFLAGS += -fPIC -fno-rtti -Werror $(INCLUDE)
+CXXFLAGS += -fPIC -fno-rtti -Wno-error $(INCLUDE)
 
 SRC := $(wildcard *.cpp)
 OBJ := $(sort $(SRC:.cpp=.o))

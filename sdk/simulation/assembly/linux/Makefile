@@ -31,8 +31,8 @@
 
 include ../../../../buildenv.mk
 
-ASFLAGS  += -Werror $(CFLAGS)
-CPPFLAGS += -Werror -I$(COMMON_DIR)/inc/internal
+ASFLAGS  += -Wno-error $(CFLAGS)
+CPPFLAGS += -Wno-error -I$(COMMON_DIR)/inc/internal
 
 .PHONY: all
 all: lowlib.o sgxsim.o

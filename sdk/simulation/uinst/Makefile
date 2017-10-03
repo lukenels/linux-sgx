@@ -46,7 +46,7 @@ CPPFLAGS += -I$(COMMON_DIR)/inc/         \
             -I$(LINUX_PSW_DIR)/urts      \
             -I$(SGX_IPP_INC)
 
-CXXFLAGS += -Werror -fPIC
+CXXFLAGS += -Wno-error -fPIC
 
 OBJ1 := linux/set_tls.o \
         linux/restore_tls.o

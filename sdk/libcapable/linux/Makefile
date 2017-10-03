@@ -31,10 +31,10 @@
 
 include ../../../buildenv.mk
 
-CXXFLAGS += -fPIC -Werror -g
+CXXFLAGS += -fPIC -Wno-error -g
 CXXFLAGS += $(ADDED_INC)
 
-CFLAGS += -fPIC -Werror -g
+CFLAGS += -fPIC -Wno-error -g
 CFLAGS += $(ADDED_INC)
 
 INC += -I$(COMMON_DIR)/inc                \

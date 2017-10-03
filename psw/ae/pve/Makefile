@@ -32,8 +32,8 @@
 TOP_DIR := ../../..
 include ../buildenv.mk
 
-CXXFLAGS  += -Werror
-CFLAGS    += -Werror 
+CXXFLAGS  += -Wno-error
+CFLAGS    += -Wno-error 
 AENAME = provision_enclave
 
 LINUX_EPID := $(LINUX_EXTERNAL_DIR)/epid/

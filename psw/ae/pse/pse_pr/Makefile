@@ -32,8 +32,8 @@
 TOP_DIR := ../../../..
 include ../../buildenv.mk
 
-CFLAGS   += -Werror
-#CXXFLAGS += -Werror
+CFLAGS   += -Wno-error
+#CXXFLAGS += -Wno-error
 
 EPID_SDK_DIR := $(TOP_DIR)/external/epid-sdk-3.0.0/
 

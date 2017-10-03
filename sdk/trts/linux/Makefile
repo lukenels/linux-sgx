@@ -31,14 +31,14 @@
 
 include ../../../buildenv.mk
 
-CFLAGS += -Werror $(ENCLAVE_CFLAGS)          \
+CFLAGS += -Wno-error $(ENCLAVE_CFLAGS)          \
           -I$(LINUX_SDK_DIR)/trts            \
           -I$(COMMON_DIR)/inc                \
           -I$(COMMON_DIR)/inc/internal       \
           -I$(COMMON_DIR)/inc/internal/linux \
           -I$(LINUX_SDK_DIR)/simulation/assembly/
 
-CXXFLAGS += -Werror $(ENCLAVE_CXXFLAGS)      \
+CXXFLAGS += -Wno-error $(ENCLAVE_CXXFLAGS)      \
           -I$(LINUX_SDK_DIR)/trts            \
           -I$(COMMON_DIR)/inc                \
           -I$(COMMON_DIR)/inc/internal/ 

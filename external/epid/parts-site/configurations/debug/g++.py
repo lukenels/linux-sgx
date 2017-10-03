@@ -31,7 +31,7 @@ config.VersionRange("3-*",
                                  # disable optimization
                                  '-O0',
                                  # treat warnings as errors
-                                 '-Werror',
+                                 '-Wno-error',
                                  # enable all warnings
                                  '-Wall',
                                  # extra warnings

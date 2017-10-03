@@ -42,7 +42,7 @@ $(EPIDLIB): $(OBJ)
 	$(AR) rcs $@ $^
 
 %.o: %.c
-	$(CC) $(INCLUDE) $(filter-out -Werror, $(CFLAGS)) $(DEFINES) -c $< -o $@
+	$(CC) $(INCLUDE) $(filter-out -Wno-error, $(CFLAGS)) $(DEFINES) -c $< -o $@
 
 .PHONY: clean
 clean:

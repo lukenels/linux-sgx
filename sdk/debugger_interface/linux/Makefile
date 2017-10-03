@@ -37,7 +37,7 @@ CFLAGS :=
 CPPFLAGS += -I$(COMMON_DIR)/inc/           \
             -I$(COMMON_DIR)/inc/internal/
 
-CFLAGS += -W -Wall -Werror -D_GNU_SOURCE -fpic
+CFLAGS += -W -Wall -Wno-error -D_GNU_SOURCE -fpic
 ifeq ($(CC_BELOW_4_9), 1)
 	CFLAGS += -fstack-protector
 else

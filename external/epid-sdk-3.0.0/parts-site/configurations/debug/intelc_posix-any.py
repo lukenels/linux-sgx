@@ -32,7 +32,7 @@ config.VersionRange("7-*",
                                  # second level optimization
                                  '-O2',
                                  # treat warnings as errors
-                                 '-Werror',
+                                 '-Wno-error',
                                  # enable all warnings
                                  '-Wall',
                                  # extra warnings

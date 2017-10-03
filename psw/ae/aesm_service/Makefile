@@ -89,7 +89,7 @@ INCLUDE += -I$(SGX_IPP_INC) \
 EDGER8R  := $(LINUX_SDK_DIR)/edger8r/linux/_build/Edger8r.native
 
 
-SQLITECFLAGS := -fPIC -Wall -Wno-unused-const-variable -Werror
+SQLITECFLAGS := -fPIC -Wall -Wno-unused-const-variable -Wno-error
 ifeq ($(CC_BELOW_4_9), 1)
 	SQLITECFLAGS += -fstack-protector
 else
@@ -113,7 +113,7 @@ ifdef PROFILE
 endif
 
 CXXFLAGS += -fPIC
-CFLAGS := $(filter-out -fPIC -Werror, $(CFLAGS))
+CFLAGS := $(filter-out -fPIC -Wno-error, $(CFLAGS))
 LINUX_SE_WRAPPER = $(COMMON_DIR)/se_wrapper
 
 ifdef DEBUG 

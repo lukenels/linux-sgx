@@ -34,8 +34,8 @@ include ../buildenv.mk
 
 AENAME = launch_enclave
 
-CFLAGS   += -Werror
-CXXFLAGS += -Werror
+CFLAGS   += -Wno-error
+CXXFLAGS += -Wno-error
 
 INCLUDE += -I$(LINUX_PSW_DIR)/ae/common
 INCLUDE += -I$(LINUX_PSW_DIR)/ae/data/constants/linux 

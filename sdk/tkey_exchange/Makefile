@@ -32,8 +32,8 @@
 TOP_DIR  = ../..
 include $(TOP_DIR)/buildenv.mk
 
-CFLAGS   += -Werror
-CXXFLAGS += -Werror
+CFLAGS   += -Wno-error
+CXXFLAGS += -Wno-error
 
 INCLUDE += -I$(COMMON_DIR)/inc/tlibc    \
            -I$(COMMON_DIR)/inc/internal \
